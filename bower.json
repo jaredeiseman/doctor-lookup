@@ -1,0 +1,20 @@
+{
+  "name": "doctor-lookup",
+  "description": "App to locate a nearby doctor to treat a particular symptom",
+  "main": "index.js",
+  "authors": [
+    "Jared Eiseman"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
