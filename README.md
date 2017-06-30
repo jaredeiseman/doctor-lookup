@@ -42,7 +42,8 @@ An exercise in using an API to locate the appropriate doctor in a user specified
 # Specs
 | Behavior | Input | Output |
 | - | - | - |
-| App will retrieve a list of all specialities | app.getSpecialties() | { list.of.specialities} |
+| App will construct query strings with variable input | app.makeQueryString() | https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey |
+| App will retrieve a list of all specialities and sort them to alphabetical order | app.getSpecialties() | { list.of.specialities} |
 | App will populate drop-down with list of specialties | displaySpecialties({ list }) | Select box populated |
 | App will query /doctors endpoint with specialty if selected, location (2 letter state code), range from location, and symptom, retrieving list of appopriate doctors within a range | app.getDoctors(loc, symptom, specialty) | { list.of.doctors } |
 | App will display the list of doctors related to the query to screen | displayDoctors({ list }) | Page appended with doctor information |
