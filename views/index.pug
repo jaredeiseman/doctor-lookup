@@ -11,12 +11,12 @@ html
         select#specialty(name="specialty")
           option
         label(for="city") City: 
-        input#city(type="text" name="city")
+        input#city(type="text" name="city" required)
         label(for="state") State: 
-        input#state(type="text" name="state")
+        input#state(type="text" name="state" required)
         label(for="range") Range: 
-        input#range(type="text" name="range")
+        input#range(type="text" name="range" required)
         label(for="symptom") Symptom: 
-        input#symptom(type="text" name="symptom")
+        input#symptom(type="text" name="symptom" required)
         input(type="submit")
-      ul#output
+      #output

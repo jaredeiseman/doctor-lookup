@@ -75,8 +75,18 @@ AppModule.prototype.getDoctors = function(loc, range, symptom, specialty = '', d
       $.get(this.makeQueryString('/doctors', params))
       .then((res) => {
         displayDoctors(res.data);
+      })
+      .fail(() => {
+        console.log('There was an error');
       });
     })
+    .fail(() => {
+      console.log('There was an error');
+    });
 }
+
+// AppModule.prototype.getDetails = function(uid) {
+//
+// }
 
 exports.appModule = AppModule;
