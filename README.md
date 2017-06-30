@@ -9,7 +9,7 @@ An exercise in using an API to locate the appropriate doctor in a user specified
 
 ## Planning
 
-# Configuration/dependencies
+### Configuration/dependencies
 * gulp-babel, babel-preset-es2015
   * For the transpiling of ES6 syntax
 * bower-files
@@ -39,7 +39,7 @@ An exercise in using an API to locate the appropriate doctor in a user specified
 * jQuery
   * Library to facilitate simpler scripts
 
-# Specs
+## Specs
 | Behavior | Input | Output |
 | - | - | - |
 | App will construct query strings with variable input | app.makeQueryString() | https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey |
@@ -47,14 +47,6 @@ An exercise in using an API to locate the appropriate doctor in a user specified
 | App will populate drop-down with list of specialties | displaySpecialties({ list }) | Select box populated |
 | App will query /doctors endpoint with specialty if selected, location (2 letter state code), range from location, and symptom, retrieving list of appopriate doctors within a range | app.getDoctors(loc, symptom, specialty) | { list.of.doctors } |
 | App will display the list of doctors related to the query to screen | displayDoctors({ list }) | Page appended with doctor information |
-
-# UX/UI
-* Develop custom style
-
-# Polish
-* Refactor minor portion of...
-* Delete unused...
-* Make README awesome
 
 ## Setup/Installation Requirements
 
