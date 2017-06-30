@@ -55,23 +55,28 @@ AppModule.prototype.getSpecialties = function(displaySpecialties) {
 }
 
 /*
+Convert location information to lat,long format then
 Retrieve data object with list of doctors that meet search criteria
-Usage: AppModule.getDoctors(loc, symptom, specialty)
+Usage: AppModule.getDoctors(loc, range, symptom, specialty, displayDoctors)
 Returns: null, but executes function to display info on page
  */
-AppModule.prototype.getDoctors = function(loc, symptom, specialty = '') {
-  var params = {
-    location: loc,
-    user_location: loc,
-    medicalIssue: symptom
-  }
-  if (specialty !== '') {
-    params.specialty_uid = specialty;
-  }
-  $.get(this.makeQueryString('/doctors', params))
-    .then((res) => {
-      console.log(res);
-    });
+AppModule.prototype.getDoctors = function(loc, range, symptom, specialty = '', displayDoctors) {
+  $.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${loc}`)
+    .then((location) => {
+      console.log(location);
+      var params = {
+        location: location.results[0].geometry.location.lat + ',' + location.results[0].geometry.location.lng + ',' + range,
+        query: symptom,
+        user_location: location.results[0].geometry.location.lat + ',' + location.results[0].geometry.location.lng
+      }
+      if (specialty !== '') {
+        params.specialty_uid = specialty;
+      }
+      $.get(this.makeQueryString('/doctors', params))
+      .then((res) => {
+        displayDoctors(res.data);
+      });
+    })
 }
 
 exports.appModule = AppModule;

@@ -7,5 +7,16 @@ html
   body
     .container
       form#search-form
-        label(for="specialty")
+        label(for="specialty") Specialty: 
         select#specialty(name="specialty")
+          option
+        label(for="city") City: 
+        input#city(type="text" name="city")
+        label(for="state") State: 
+        input#state(type="text" name="state")
+        label(for="range") Range: 
+        input#range(type="text" name="range")
+        label(for="symptom") Symptom: 
+        input#symptom(type="text" name="symptom")
+        input(type="submit")
+      ul#output
