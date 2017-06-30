@@ -49,7 +49,7 @@ function displayDoctors(data) {
 
 $(document).ready(function() {
   //Populate select box with available specialties on page load
-  app.getSpecialties(displaySpecialties);
+  // app.getSpecialties(displaySpecialties);
 
   $('#search-form').submit(function(e) {
     e.preventDefault();
@@ -62,6 +62,6 @@ $(document).ready(function() {
     var symptom = $('#symptom').val();
 
     //execute query and pass callback for data display
-    app.getDoctors(`${city},${state}`, range, symptom, specialty, displayDoctors);
+    // app.getDoctors(`${city},${state}`, range, symptom, specialty, displayDoctors);
   });
 });

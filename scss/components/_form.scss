@@ -1,0 +1,47 @@
+#search-form {
+  @include grid-container();
+  padding-bottom: 30px;
+  border-bottom: 2px solid #666;
+
+  .form-group {
+    @include grid-column(12);
+
+    @include tablet-bp {
+      @include grid-column(6);
+    }
+  }
+
+  label, input {
+    display: block;
+  }
+
+  input, select {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid $dark-green;
+    border-radius: 3px;
+    color: #666;
+  }
+  label {
+    margin-top: 15px;
+  }
+  input {
+    padding: 8.5px;
+    line-height: 20px;
+  }
+  select {
+    height: 42px;
+  }
+  input[type="submit"] {
+    margin-top: 37px;
+    height: 42px;
+    background: $green;
+    border: 1px solid $dark-green;
+    color: #fff;
+    transition: background .3s;
+    cursor: pointer;
+    &:hover {
+      background: $light-green;
+    }
+  }
+}

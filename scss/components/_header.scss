@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  background: $green;
+  padding: 20px;
+  .brand {
+    font-family: $heading-font;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: white;
+        transition: color .3s, text-decoration .3s;
+        &:hover {
+          color: $light-green;
+          text-decoration: underline;
+        }
+        li {
+          display: inline-block;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

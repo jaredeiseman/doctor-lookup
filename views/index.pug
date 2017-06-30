@@ -3,20 +3,106 @@ html
     title 
     script(src="build/js/vendor.min.js")
     script(src="build/js/app.js")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet")
     link(rel="stylesheet" type="text/css" href="build/css/styles.css")
   body
     .container
-      form#search-form
-        label(for="specialty") Specialty: 
-        select#specialty(name="specialty")
-          option
-        label(for="city") City: 
-        input#city(type="text" name="city" required)
-        label(for="state") State: 
-        input#state(type="text" name="state" required)
-        label(for="range") Range: 
-        input#range(type="text" name="range" required)
-        label(for="symptom") Symptom: 
-        input#symptom(type="text" name="symptom" required)
-        input(type="submit")
-      #output
+      header
+        .brand
+          span FindADoc
+        nav
+          ul
+            a(href="#")
+              li Home
+            a(href="#")
+              li Contact
+      .content-container
+        h1 Looking for a doctor?
+        h2 Fill out the below form and see whose around that can help you
+        form#search-form
+          .form-group
+            label(for="specialty") Specialty: 
+            select#specialty(name="specialty")
+              option
+            label(for="city") City: 
+            input#city(type="text" name="city" required)
+            label(for="state") State: 
+            select#state(name="state" required)
+              option(value="AL") Alabama
+              option(value="AK") Alaska
+              option(value="AZ") Arizona
+              option(value="AR") Arkansas
+              option(value="CA") California
+              option(value="CO") Colorado
+              option(value="CT") Connecticut
+              option(value="DE") Delaware
+              option(value="DC") District Of Columbia
+              option(value="FL") Florida
+              option(value="GA") Georgia
+              option(value="HI") Hawaii
+              option(value="ID") Idaho
+              option(value="IL") Illinois
+              option(value="IN") Indiana
+              option(value="IA") Iowa
+              option(value="KS") Kansas
+              option(value="KY") Kentucky
+              option(value="LA") Louisiana
+              option(value="ME") Maine
+              option(value="MD") Maryland
+              option(value="MA") Massachusetts
+              option(value="MI") Michigan
+              option(value="MN") Minnesota
+              option(value="MS") Mississippi
+              option(value="MO") Missouri
+              option(value="MT") Montana
+              option(value="NE") Nebraska
+              option(value="NV") Nevada
+              option(value="NH") New Hampshire
+              option(value="NJ") New Jersey
+              option(value="NM") New Mexico
+              option(value="NY") New York
+              option(value="NC") North Carolina
+              option(value="ND") North Dakota
+              option(value="OH") Ohio
+              option(value="OK") Oklahoma
+              option(value="OR") Oregon
+              option(value="PA") Pennsylvania
+              option(value="RI") Rhode Island
+              option(value="SC") South Carolina
+              option(value="SD") South Dakota
+              option(value="TN") Tennessee
+              option(value="TX") Texas
+              option(value="UT") Utah
+              option(value="VT") Vermont
+              option(value="VA") Virginia
+              option(value="WA") Washington
+              option(value="WV") West Virginia
+              option(value="WI") Wisconsin
+              option(value="WY") Wyoming
+          .form-group
+            label(for="range") Range: 
+            input#range(type="text" name="range" required)
+            label(for="symptom") Symptom: 
+            input#symptom(type="text" name="symptom" required)
+            input(type="submit")
+        #output
+          .card
+            h3.name Dr. John Henry, MD
+            p.bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            h4.practices Practices
+            .practice-card
+              h4 Practice Name
+              p Phone Number: 5036171212
+              p Address: 3181 SW Sam Jackson Park Rd, Portland, OR, 97239
+            .practice-card
+              h4 Practice Name
+              p Phone Number: 5036171212
+              p Address: 3181 SW Sam Jackson Park Rd, Portland, OR, 97239
+            .practice-card
+              h4 Practice Name
+              p Phone Number: 5036171212
+              p Address: 3181 SW Sam Jackson Park Rd, Portland, OR, 97239
+            .practice-card
+              h4 Practice Name
+              p Phone Number: 5036171212
+              p Address: 3181 SW Sam Jackson Park Rd, Portland, OR, 97239

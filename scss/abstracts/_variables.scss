@@ -1,0 +1,12 @@
+// typography vars
+$heading-font: 'Roboto', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// colors
+$green: #2e8b57;
+$light-green: lighten($green, 20%);
+$dark-green: darken($green, 20%);
+
+//breakpoints
+$tablet-bp: screen and (min-width: 768px);
+$desktop-bp: screen and (min-width: 992px);
