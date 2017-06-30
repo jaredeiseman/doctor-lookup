@@ -63,7 +63,6 @@ Returns: null, but executes function to display info on page
 AppModule.prototype.getDoctors = function(loc, range, symptom, specialty = '', displayDoctors) {
   $.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${loc}`)
     .then((location) => {
-      console.log(location);
       var params = {
         location: location.results[0].geometry.location.lat + ',' + location.results[0].geometry.location.lng + ',' + range,
         query: symptom,
@@ -84,9 +83,5 @@ AppModule.prototype.getDoctors = function(loc, range, symptom, specialty = '', d
       console.log('There was an error');
     });
 }
-
-// AppModule.prototype.getDetails = function(uid) {
-//
-// }
 
 exports.appModule = AppModule;

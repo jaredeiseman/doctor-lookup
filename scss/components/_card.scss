@@ -16,6 +16,7 @@
 
     @include tablet-bp {
       @include grid-column(6);
+      min-height: 125px;
     }
 
     @include desktop-bp {

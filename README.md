@@ -47,9 +47,6 @@ An exercise in using an API to locate the appropriate doctor in a user specified
 | App will populate drop-down with list of specialties | displaySpecialties({ list }) | Select box populated |
 | App will query /doctors endpoint with specialty if selected, location (2 letter state code), range from location, and symptom, retrieving list of appopriate doctors within a range | app.getDoctors(loc, symptom, specialty) | { list.of.doctors } |
 | App will display the list of doctors related to the query to screen | displayDoctors({ list }) | Page appended with doctor information |
-| App will retrieve more detailed information about a specific practice upon user click from appended data form getDoctors() from /doctors/uid | User click | { more.detailed.data } |
-| Displayed doctors will have links to get more information about their practice | app.getDetails(uid) | { more.detailed.info } |
-| Display detailed information | displayDetails(data) | Output to page |
 
 # UX/UI
 * Develop custom style
